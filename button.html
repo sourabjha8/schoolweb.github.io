@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="but.css">
+    <style>
+        .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.25rem;
+    position: relative;
+    margin: 261px;
+    font-family: 'Poppins', sans-serif;
+}
+.btn-1{
+    background: black;
+    color: white;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+.btn-1::after, .btn-1::before{
+    content: "";
+    position: absolute;
+    opacity: 0.5;
+    background: black;
+    border: inherit;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+.btn-1:hover{
+    transform: translate(-12px,-12px);
+}
+.btn-1:hover::after{
+    transform: translate(6px,6px);
+}
+.btn-1:hover::before{
+    transform: translate(12px,12px);
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="button">
+            <a href="https://docs.google.com/spreadsheets/d/170DOwBtTosdCO_t83QrXn9w8Fe0iA_mKjj9pchIg7ww/edit#gid=0" class="btn btn-1" target="_blank">Click for Opening Data Sheet</a>
+        </div>
+    </div>
+</body>
+</html>
